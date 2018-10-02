@@ -1,0 +1,44 @@
+:host {
+    /* display: inline-flex; */
+}
+
+:host(:focus) {
+    outline: none;
+}
+
+button {
+    align-items: center;
+    background: linear-gradient(to right, var(--banana-color--primary), var(--banana-color--danger));
+    border: none;
+    border-radius: 24px;
+    box-sizing: inherit;
+    box-shadow: 0px 4px 12px 0px var(--banana-color--primary-light), inset 0 0 0 4px rgba(255, 255, 255, .3);
+    color: var(--banana-color--blackish);
+    color: var(--banana-color--white);
+    cursor: pointer !important;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    max-width: 300px;
+    padding: 0 28px;
+    position: inherit;
+    user-select: none;
+    transition: box-shadow .5s;
+}
+
+button:hover {
+    box-shadow: 0px 8px 36px 0px var(--banana-color--danger-light), inset 0 0 0 4px rgba(255, 255, 255, .5);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0px 8px 36px 0px var(--banana-color--danger-light), inset 0 0 0 4px rgba(255, 255, 255, .5);
+}
+
+button > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

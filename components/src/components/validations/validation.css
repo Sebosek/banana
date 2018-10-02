@@ -1,0 +1,7 @@
+.validation {
+    display: inline;
+}
+
+.validation--hide {
+    display: none;
+}

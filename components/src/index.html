@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Stencil Component Starter</title>
+    <script src="/build/banana-components.js"></script>
+    <style type="text/css">
+        body {
+            background: var(--banana-color--noise-light, #f6f9ff);
+            padding-top: 20px;
+
+            --banana-color--primary: #eda1c1;
+            --banana-color--primary: #e7b3b3;
+            --banana-color--primary: #fab2ac;
+            --banana-color--primary-light: #ffdfdf;
+            --banana-color--primary: #FFE066;
+            --banana-color--primary-light: #FFF6D5;
+            --banana-color--success: #79ca01;
+            --banana-color--danger: #F07178;
+            --banana-color--danger-light: #FDF2F2;
+            --banana-color--danger-dark: #DB676E;
+            --banana-color--noise: #ebeff8;
+            --banana-color--noise-light: #f6f9ff;
+            --banana-color--noise-dark: #D6D6D6;
+            --banana-color--white: #ffffff;
+            --banana-color--blackish: #02040F;
+            --banana-color--blackish-light: #474850;
+            --banana-color--blackish-dark: #000000;
+        }
+
+        .content {
+            background: var(--banana-color--white, #fff);
+            border: 2px solid var(--banana-color--noise, #ebeff8);
+            border-radius: 16px;
+            box-shadow: 0px 10px 40px 0px var(--banana-color--noise, #ebeff8);
+            display: flex;
+            flex-direction: column;
+            left: 50%;
+            padding: 20px;
+            position: relative;
+            transform: translateX(-50%);
+            width: 980px;
+        }
+
+        banana-input {
+            display: block;
+            margin-bottom: 0px;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="content">
+        <banana-validator>
+            <banana-input name="email" label="E-mail" placeholder="Valid email address">
+                <banana-validations>
+                    <banana-required-validation for="email">
+                        <banana-fail>This field is mandatory!</banana-fail>
+                    </banana-required-validation>
+                    <banana-email-validation for="email">
+                        <banana-fail>Invalid e-mail addres; please use e-mail address like:&nbsp;<i>john@doe.local</i></banana-fail>
+                    </banana-email-validation>
+                </banana-validations>
+            </banana-input>
+
+            <banana-input name="password" label="Password" placeholder="Type safe and hard to guess password">
+                <banana-validations>
+                    <banana-required-validation for="password">
+                        <banana-fail>This field is mandatory!</banana-fail>
+                    </banana-required-validation>
+                </banana-validations>
+            </banana-input>
+        </banana-validator>
+
+        <div class="center">
+            <banana-button>Sign up!</banana-button>
+        </div>
+    </section>
+
+</body>
+
+</html>
